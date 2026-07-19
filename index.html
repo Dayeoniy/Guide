@@ -13,8 +13,8 @@
   }
 
   :root{
-    --paper:#FAF9F7; --card:#FFFFFF; --ink:#1C1A17; --sub:#6C665E;
-    --soft:#E7E2D9; --soft-2:#F1EEE8;
+    --paper:#FFFFFF; --card:#FFFFFF; --ink:#1C1A17; --sub:#6C665E;
+    --soft:#F0F0F0; --soft-2:#F8F8F8;
     --accent:#C1613C; --accent-soft:#F6EBE3;
     --red:#E14B4B; --blue:#3B6BE0; --green:#2FA469; --amber:#E9A21A;
     --pink:#DE4B8E; --purple:#8A55C7; --teal:#1EA396;
@@ -30,18 +30,18 @@
   .frame{position:relative;padding:20px 22px 30px}
 
   /* 언어 토글 */
-  .lang{display:inline-flex;gap:3px;background:var(--soft-2);padding:4px;border-radius:999px;margin-bottom:20px}
+  .lang{display:inline-flex;flex-wrap:wrap;justify-content:center;gap:3px;background:var(--soft-2);padding:4px;border-radius:999px;margin-bottom:20px}
   .lang-btn{border:0;background:transparent;cursor:pointer;font-family:var(--body);
-    font-weight:600;font-size:13px;color:var(--sub);padding:6px 15px;border-radius:999px;transition:.15s}
+    font-weight:600;font-size:15px;color:var(--sub);padding:8px 18px;border-radius:999px;transition:.15s}
   .lang-btn.on{background:var(--accent);color:#fff}
 
-  h1{font-family:var(--display);font-weight:400;font-size:clamp(34px,9vw,52px);line-height:1.15;letter-spacing:-.01em;margin-top:8px}
+  h1{font-family:var(--display);font-weight:400;font-size:clamp(38px,10vw,58px);line-height:1.15;letter-spacing:-.01em;margin-top:8px}
   h1 .con{color:var(--accent)}
-  .subtitle{color:var(--sub);font-size:15px;font-weight:400;margin-top:12px}
+  .subtitle{color:var(--sub);font-size:17px;font-weight:400;margin-top:14px}
 
   .tabs{display:flex;gap:8px;margin:26px auto 0;max-width:420px;background:var(--soft-2);padding:6px;border-radius:14px}
-  .tab{flex:1;cursor:pointer;border:0;background:transparent;color:var(--sub);border-radius:10px;padding:12px 8px;
-    font-family:var(--display);font-weight:400;font-size:20px;display:flex;align-items:center;justify-content:center;gap:7px;transition:.18s}
+  .tab{flex:1;cursor:pointer;border:0;background:transparent;color:var(--sub);border-radius:10px;padding:14px 8px;
+    font-family:var(--display);font-weight:400;font-size:22px;display:flex;align-items:center;justify-content:center;gap:7px;transition:.18s}
   .tab .ico{font-size:16px}
   .tab.on{background:var(--card);color:var(--ink);box-shadow:0 2px 8px rgba(0,0,0,.06)}
 
@@ -51,154 +51,253 @@
 
   .meta{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:24px 0 4px}
   .meta .m{display:inline-flex;align-items:center;gap:7px;background:var(--card);border:1px solid var(--soft);
-    border-radius:999px;padding:8px 15px;font-size:14px;font-weight:500}
+    border-radius:999px;padding:10px 18px;font-size:16px;font-weight:500}
   .meta .m b{font-weight:700;color:var(--accent)}
 
   .block{margin-top:38px}
-  .sec-title{font-family:var(--display);font-weight:400;font-size:clamp(24px,5.8vw,29px);line-height:1.25}
-  .sec-desc{color:var(--sub);font-size:14px;font-weight:400;margin-top:6px}
+  .sec-title{font-family:var(--display);font-weight:400;font-size:clamp(28px,6.6vw,34px);line-height:1.25;margin-bottom:18px}
   .mark{width:34px;height:3px;background:var(--accent);border-radius:2px;margin:13px auto 20px}
 
   .panels{display:grid;grid-template-columns:1fr 1fr;gap:12px}
   @media(max-width:430px){.panels{grid-template-columns:1fr}}
-  .ptile{background:var(--card);border:1px solid var(--soft);border-radius:16px;padding:22px 14px 20px}
-  .swatch{width:56px;height:56px;margin:0 auto 14px;border-radius:14px;display:grid;place-items:center;font-size:22px;font-weight:800;color:#fff}
+  .ptile{background:var(--card);border:1px solid var(--soft);border-radius:16px;padding:26px 16px 24px}
+  .swatch{width:66px;height:66px;margin:0 auto 16px;border-radius:16px;display:grid;place-items:center;font-size:27px;font-weight:800;color:#fff}
   .swatch.blink{animation:blink 1.05s steps(1) infinite}
   @keyframes blink{50%{opacity:.32}}
-  .ptile .tag{display:inline-block;font-size:11px;font-weight:600;color:var(--sub);background:var(--soft-2);border-radius:5px;padding:2px 9px;margin-bottom:8px}
-  .ptile h4{font-size:17px;font-weight:700;margin-bottom:6px}
-  .ptile p{font-size:13.5px;color:var(--sub);font-weight:400;line-height:1.55}
+  .ptile .tag{display:inline-block;font-size:13.5px;font-weight:600;color:var(--sub);background:var(--soft-2);border-radius:6px;padding:3px 11px;margin-bottom:9px}
+  .ptile h4{font-size:20px;font-weight:700;margin-bottom:7px}
+  .ptile p{font-size:16px;color:var(--sub);font-weight:400;line-height:1.6}
   .ptile p b{color:var(--ink);font-weight:600}
   .s-red{background:var(--red)} .s-blue{background:var(--blue)} .s-green{background:var(--green)} .s-amber{background:var(--amber)}
 
 
-  .steps{display:grid;gap:10px;counter-reset:s;max-width:490px;margin:0 auto}
-  .step{display:flex;align-items:center;justify-content:center;gap:11px;background:var(--card);border:1px solid var(--soft);border-radius:12px;padding:14px 16px}
-  .step .n{counter-increment:s;width:26px;height:26px;flex:none;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:13px;background:var(--accent);color:#fff}
+  .steps{display:grid;counter-reset:s;max-width:560px;margin:0 auto;background:var(--card);border:1px solid var(--soft);border-radius:14px;padding:8px 24px;text-align:left}
+  .step{display:flex;align-items:flex-start;gap:14px;padding:16px 0;border-bottom:1px solid var(--soft-2)}
+  .step:last-child{border-bottom:0}
+  .step .n{counter-increment:s;flex:none;width:24px;text-align:right;padding-right:13px;border-right:2.5px solid var(--accent);font-weight:800;font-size:17px;color:var(--ink);line-height:1.65}
   .step .n::before{content:counter(s)}
-  .step p{font-size:14.5px;font-weight:400}
+  .step p{font-size:17px;font-weight:400;text-align:left}
   .step p b{font-weight:700}
   .step p .hl{color:var(--accent);font-weight:700}
 
-  .callout{max-width:490px;margin:16px auto 0;background:var(--accent-soft);border:1px solid #ecd7c8;border-radius:14px;padding:18px}
-  .callout .ic{font-size:22px}
-  .callout .big{font-weight:700;font-size:15.5px;margin:6px 0 3px}
-  .callout p{font-size:13.5px;color:var(--sub);font-weight:400}
+  .callout{max-width:490px;margin:16px auto 0;background:var(--accent-soft);border:1px solid #ecd7c8;border-radius:14px;padding:22px 18px}
+  .callout .ic{font-size:32px}
+  .callout .big{font-weight:700;font-size:24px;margin:8px 0 0}
+  .callout p{font-size:15.5px;color:var(--sub);font-weight:400}
   .callout .eq{font-weight:800;color:var(--accent)}
 
-  .note{max-width:530px;margin:22px auto 0;background:var(--soft-2);border-radius:12px;padding:15px 18px;font-size:14px;color:var(--sub);font-weight:400}
+  .note{max-width:530px;margin:22px auto 0;background:var(--soft-2);border-radius:12px;padding:17px 20px;font-size:16px;color:var(--sub);font-weight:400}
   .note b{color:var(--ink);font-weight:700}
 
   .zones{display:grid;gap:16px}
   .zcard{background:var(--card);border:1px solid var(--soft);border-radius:16px;padding:20px 18px}
-  .zcard h4{font-family:var(--display);font-weight:400;font-size:22px}
-  .zcard .p{font-size:13px;color:var(--sub);font-weight:400;margin:3px 0 15px}
+  .zcard h4{font-family:var(--display);font-weight:400;font-size:25px}
+  .zcard .p{font-size:15.5px;color:var(--sub);font-weight:400;margin:4px 0 16px}
   .floor{display:grid;gap:3px;background:var(--soft-2);border:1px solid var(--soft);border-radius:10px;padding:7px;max-width:360px;margin:0 auto}
   .cell{aspect-ratio:1/1;border-radius:4px;background:#fff;border:1px solid #EDE9E2}
   .cell.z{border:none} .cell.goal{position:relative}
   .cell.goal::after{content:"";position:absolute;inset:26%;border-radius:50%;background:#fff;box-shadow:0 0 0 1.5px rgba(0,0,0,.12)}
   .zkey{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:15px}
-  .zkey span{display:inline-flex;align-items:center;gap:7px;font-size:13px;color:var(--sub);font-weight:500}
-  .zkey i{width:14px;height:14px;border-radius:4px}
+  .zkey span{display:inline-flex;align-items:center;gap:8px;font-size:15px;color:var(--sub);font-weight:500}
+  .zkey i{width:16px;height:16px;border-radius:4px}
 
   .winrow{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:520px;margin:0 auto}
   @media(max-width:430px){.winrow{grid-template-columns:1fr}}
   .wbox{border:1px solid var(--soft);border-radius:14px;padding:18px 16px}
   .wbox.win{border-color:#bfe4cf;background:linear-gradient(180deg,#f2faf5,var(--card))}
   .wbox.reset{border-color:#f0cdc0;background:linear-gradient(180deg,#fcf3ee,var(--card))}
-  .wbox h5{font-size:15px;font-weight:700;margin-bottom:5px}
-  .wbox p{font-size:13.5px;color:var(--sub);font-weight:400}
+  .wbox h5{font-size:17.5px;font-weight:700;margin-bottom:6px}
+  .wbox p{font-size:15.5px;color:var(--sub);font-weight:400}
   .wbox p b{color:var(--ink);font-weight:600}
 
-  .tips{max-width:500px;margin:0 auto;background:var(--card);border:1px solid var(--soft);border-radius:14px;padding:6px 20px}
-  .tip{display:flex;gap:12px;align-items:center;justify-content:center;padding:12px 0;border-bottom:1px solid var(--soft-2)}
+  .tips{max-width:560px;margin:0 auto;background:var(--card);border:1px solid var(--soft);border-radius:14px;padding:8px 24px;text-align:left}
+  .tip{display:flex;gap:14px;align-items:flex-start;justify-content:flex-start;padding:16px 0;border-bottom:1px solid var(--soft-2)}
   .tip:last-child{border-bottom:0}
-  .tip .s{color:var(--accent);font-weight:800;font-size:14px;flex:none}
-  .tip p{font-size:14.5px;font-weight:400}
+  .tip .s{flex:none;width:24px;text-align:right;padding-right:13px;border-right:2.5px solid var(--accent);font-weight:800;font-size:17px;color:var(--ink);line-height:1.65}
+  .tip p{font-size:17px;font-weight:400;text-align:left}
   .tip p b{font-weight:700}
 
-  footer{margin-top:42px;padding-top:24px;border-top:1px solid var(--soft);color:var(--sub);font-size:14px;font-weight:400}
+  footer{margin-top:42px;padding-top:24px;border-top:1px solid var(--soft);color:var(--sub);font-size:16px;font-weight:400}
   footer b{color:var(--accent);font-weight:700}
 
+  body[data-lang="en"],body[data-lang="fr"]{--body:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;--display:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif}
+  body[data-lang="zh"]{--body:system-ui,'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans SC',sans-serif;--display:system-ui,'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans SC',sans-serif}
+  body[data-lang="ja"]{--body:system-ui,'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo','Noto Sans JP',sans-serif;--display:system-ui,'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo','Noto Sans JP',sans-serif}
+  body:not([data-lang="ko"]) h1,body:not([data-lang="ko"]) .sec-title,body:not([data-lang="ko"]) .tab,body:not([data-lang="ko"]) .zcard h4{font-weight:800;letter-spacing:-.02em}
+
+  /* 협동모드 난이도 */
+  .coop-difficulty{max-width:560px;margin:0 auto;display:grid;gap:12px}
+  .difficulty-group{display:grid;gap:12px;position:relative}
+  .pair-label{font-family:var(--display);font-size:14px;font-weight:700;line-height:1.2;color:var(--sub);text-align:left;margin:4px 0 0 4px}
+  .difficulty-card{background:#1C1A17;border:3px solid #000;border-radius:12px;padding:14px;text-align:left}
+  .difficulty-card-title{font-family:var(--display);font-size:24px;font-weight:700;color:#fff;line-height:1.25}
+  .difficulty-card-desc{font-size:15px;color:#ccc;margin-top:8px;line-height:1.5}
+  .difficulty-flow{display:flex;align-items:center;justify-content:center;gap:10px;margin:4px 0 2px;color:var(--sub);font-family:var(--display);font-size:14px;font-weight:700}
+  .difficulty-flow::before,.difficulty-flow::after{content:"";height:1px;background:var(--soft);flex:1}
+  @media(max-width:560px){
+    .coop-difficulty{gap:10px}
+    .difficulty-card{padding:12px;border-width:2px;border-radius:10px}
+    .difficulty-card-title{font-size:21px}
+    .difficulty-card-desc{font-size:14px}
+    .pair-label,.difficulty-flow{font-size:13px}
+  }
   @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
-<body>
+<body data-lang="ko">
 <div class="wrap">
 <div class="frame">
 
   <div class="lang">
     <button class="lang-btn on" data-lang="ko">한국어</button>
     <button class="lang-btn" data-lang="en">English</button>
+    <button class="lang-btn" data-lang="zh">中文</button>
+    <button class="lang-btn" data-lang="ja">日本語</button>
+    <button class="lang-btn" data-lang="fr">Français</button>
   </div>
 
   <header>
-    <h1 data-en="Pump Arcade<br>Mode Guide">펌프 아케이드<br>모드 가이드</h1>
-    <p class="subtitle" data-en="Survive together, or race to claim — two game modes">함께 살아남는 협동, 먼저 차지하는 대결 — 두 가지 모드</p>
+    <h1 data-en="Pump Arcade<br>Mode Guide" data-zh="Pump Arcade<br>模式指南" data-ja="Pump Arcade<br>モードガイド" data-fr="Pump Arcade<br>Guide des modes">펌프 아케이드<br>모드 가이드</h1>
   </header>
 
   <nav class="tabs">
-    <button class="tab on" data-mode="coop" data-en="<span class='ico'>🤝</span>Co-op"><span class="ico">🤝</span>협동모드</button>
-    <button class="tab" data-mode="rival" data-en="<span class='ico'>⚔️</span>Rival Match"><span class="ico">⚔️</span>라이벌 매치</button>
+    <button class="tab on" data-mode="intro" data-en="Overview" data-zh="概览" data-ja="概要" data-fr="Aperçu">개요</button>
+    <button class="tab" data-mode="coop" data-en="<span class='ico'>🤝</span>Co-op" data-zh="<span class='ico'>🤝</span>协力模式" data-ja="<span class='ico'>🤝</span>協力モード" data-fr="<span class='ico'>🤝</span>Coopération"><span class="ico">🤝</span>협동모드</button>
+    <button class="tab" data-mode="rival" data-en="<span class='ico'>⚔️</span>Rival Match" data-zh="<span class='ico'>⚔️</span>对战模式" data-ja="<span class='ico'>⚔️</span>ライバルマッチ" data-fr="<span class='ico'>⚔️</span>Match rival"><span class="ico">⚔️</span>라이벌 매치</button>
   </nav>
 
-  <!-- ============ 협동모드 / Co-op ============ -->
-  <section class="mode show" id="coop">
+  <!-- ============ 개요 / Overview ============ -->
+  <section class="mode show" id="intro">
+    <div class="block" style="margin-top:0">
+      <h3 style="font-family:var(--display);font-size:28px;font-weight:700;text-align:center;margin-bottom:36px;margin-top:20px;color:var(--ink);" data-en="Choose Your Mode" data-zh="选择你的模式" data-ja="モードを選ぶ" data-fr="Choisissez votre mode">모드를 선택해주세요!</h3>
+      
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:560px;margin:0 auto;">
+        <!-- 협동모드 카드 -->
+        <div style="background:var(--card);border:3px solid #000000;border-radius:16px;padding:20px;text-align:center;cursor:pointer;" onclick="document.querySelector('[data-mode=coop]').click()">
+          <div style="font-size:40px;margin-bottom:12px;">🤝</div>
+          <h4 style="font-family:var(--display);font-size:24px;font-weight:800;margin-bottom:8px;color:var(--ink);" data-en="Co-op Mode" data-zh="协力模式" data-ja="協力モード" data-fr="Mode coop">협동모드</h4>
+          <p style="font-size:16px;color:var(--ink);margin-bottom:14px;line-height:1.6;font-weight:600;" data-en="Survive dodging red panels as a team!" data-zh="一队躲避红色地板生存！" data-ja="赤パネルを避けてチームで生き残ろう！" data-fr="Survivez en équipe !">한 팀으로 빨간색 피하며 생존하기!</p>
+          
+          <div style="font-size:12px;color:var(--sub);padding:8px;background:var(--soft-2);border-radius:8px;" data-en="2–8 players · 15 min" data-zh="2~8人 · 15分钟" data-ja="2〜8人 · 15分" data-fr="2-8 joueurs · 15 min">2~8명 · 15분</div>
+        </div>
 
-    <div class="meta">
-      <span class="m" data-en="⏱ Time limit <b>15 min</b>">⏱ 제한시간 <b>15분</b></span>
-      <span class="m" data-en="👥 <b>2–8 players</b> at once">👥 <b>2~8명</b> 동시 플레이</span>
-      <span class="m" data-en="🎯 Clear it together">🎯 다 함께 클리어</span>
-    </div>
-
-    <div class="block">
-      <div class="sec-title" data-en="What each color means">발판 색깔의 뜻</div>
-      <p class="sec-desc" data-en="Read the color under you and react fast.">바닥에 켜지는 색을 보고 순간적으로 판단하세요.</p>
-      <div class="panels">
-        <div class="ptile"><div class="swatch s-red">✕</div>
-          <span class="tag" data-en="Avoid">피하기</span>
-          <h4 data-en="Red panel">빨간 발판</h4>
-          <p data-en="Step on it and you <b>lose a heart.</b> Never step here — move away fast.">밟으면 <b>하트가 하나 줄어요.</b> 절대 밟지 말고 얼른 비켜요.</p></div>
-        <div class="ptile"><div class="swatch s-blue">+1</div>
-          <span class="tag" data-en="Score">점수</span>
-          <h4 data-en="Blue panel">파란 발판</h4>
-          <p data-en="Each step earns <b>+1 point.</b> Grab them while it's safe!">밟을 때마다 <b>점수가 +1</b> 올라가요. 안전할 때 부지런히!</p></div>
-        <div class="ptile"><div class="swatch s-green">✓</div>
-          <span class="tag" data-en="Safe zone">안전지대</span>
-          <h4 data-en="Green panel">초록 발판</h4>
-          <p data-en="Stand here and you <b>won't lose hearts.</b> A spot to catch your breath.">여기 있으면 <b>하트가 줄지 않아요.</b> 잠깐 쉬어가는 곳.</p></div>
-        <div class="ptile"><div class="swatch s-amber blink">⚠</div>
-          <span class="tag" data-en="Warning">위험 예고</span>
-          <h4 data-en="Yellow panel (blinking)">노란 발판 (깜빡깜빡)</h4>
-          <p data-en="A sign it's <b>about to turn red.</b> Get off it early!"><b>곧 빨간 발판으로 바뀐다</b>는 신호예요. 미리 벗어나요!</p></div>
+        <!-- 라이벌매치 카드 -->
+        <div style="background:var(--card);border:3px solid #000000;border-radius:16px;padding:20px;text-align:center;cursor:pointer;" onclick="document.querySelector('[data-mode=rival]').click()">
+          <div style="font-size:40px;margin-bottom:12px;">⚔️</div>
+          <h4 style="font-family:var(--display);font-size:24px;font-weight:800;margin-bottom:8px;color:var(--ink);" data-en="Rival Match" data-zh="对战模式" data-ja="ライバルマッチ" data-fr="Match rival">라이벌 매치</h4>
+          <p style="font-size:16px;color:var(--ink);margin-bottom:14px;line-height:1.6;font-weight:600;" data-en="Compete in speed and accuracy!" data-zh="竞争速度和准确性！" data-ja="速度と正確さで競争！" data-fr="Rivalises en vitesse et précision !">개인/팀으로 나뉘어 누가 더 빨리, 정확히 발판을 밟나 대결!</p>
+          
+          <div style="font-size:12px;color:var(--sub);padding:8px;background:var(--soft-2);border-radius:8px;" data-en="2–4 players · 15 min" data-zh="2~4人 · 15分钟" data-ja="2〜4人 · 15分" data-fr="2-4 joueurs · 15 min">2~4명 · 15분</div>
+        </div>
       </div>
     </div>
 
     <div class="block">
-      <div class="sec-title" data-en="How to play">플레이 방법</div>
-      <p class="sec-desc" data-en="This cycle keeps repeating.">이 흐름이 계속 반복돼요.</p>
+      <h3 style="font-size:20px;font-weight:700;margin-bottom:14px;color:var(--ink);" data-en="Quick Tips" data-zh="快速提示" data-ja="ちょっとしたコツ" data-fr="Conseils rapides">팁</h3>
+      <div style="max-width:560px;margin:0 auto;font-size:15px;color:var(--sub);line-height:1.7;">
+        <p style="margin-bottom:12px;" data-en="💡 <b>Co-op</b> is perfect for casual play with friends — work together to survive!" data-zh="💡 <b>协力模式</b>很适合和朋友一起轻松玩 — 一起生存!" data-ja="💡 <b>協力モード</b>は友達とカジュアルに遊ぶのに最適 — 一緒に生き残ろう！" data-fr="💡 <b>Mode coop</b> idéal pour jouer entre amis — travaillez ensemble !">💡 <b>협동모드</b>는 친구들과 편하게 즐기기 좋아요 — 함께 살아남아요!</p>
+        <p data-en="⚡ <b>Rival Match</b> brings competitive energy — fast reflexes and strategy matter!" data-zh="⚡ <b>对战模式</b>充满竞争气息 — 快速反应和策略很重要！" data-ja="⚡ <b>ライバルマッチ</b>は競争心あふれる — 素早い反応と戦略が大事！" data-fr="⚡ <b>Match rival</b> apporte l'énergie competitive — réflexes et stratégie !">⚡ <b>라이벌 매치</b>는 경쟁 에너지가 넘쳐요 — 빠른 반사신경과 전략이 중요해요!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 협동모드 / Co-op ============ -->
+  <section class="mode" id="coop">
+
+    <div class="meta">
+      <span class="m" data-en="⏱ Time limit <b>15 min</b>" data-zh="⏱ 限时 <b>15分钟</b>" data-ja="⏱ 制限時間 <b>15分</b>" data-fr="⏱ Durée <b>15 min</b>">⏱ 제한시간 <b>15분</b></span>
+      <span class="m" data-en="👥 <b>2–8 players</b> at once" data-zh="👥 <b>2~8人</b>同时游玩" data-ja="👥 <b>2〜8人</b>同時プレイ" data-fr="👥 <b>2 à 8 joueurs</b> en même temps">👥 <b>2~8명</b> 동시 플레이</span>
+      <span class="m" data-en="🎯 Clear it together" data-zh="🎯 一起通关" data-ja="🎯 みんなでクリア" data-fr="🎯 Terminez ensemble">🎯 다 함께 클리어</span>
+    </div>
+
+    <div class="block">
+      <div class="sec-title" data-en="Difficulty" data-zh="难度" data-ja="難易度" data-fr="Difficulté">난이도</div>
+      <div class="coop-difficulty">
+        <div class="difficulty-group">
+          <div class="pair-label" data-en="Similar level" data-zh="难度相近" data-ja="難易度同等" data-fr="Niveau similaire">난이도 비슷</div>
+          <div class="difficulty-card">
+            <div class="difficulty-card-title" data-en="Umi's Park Outing" data-zh="乌米的公园郊游" data-ja="ウミの公園おでかけ" data-fr="Sortie au parc d'Umi">루미의 동산나들이</div>
+            <div class="difficulty-card-desc" data-en="A course perfect for kids.<br>Choose between an outing and a casual walk!" data-zh="非常适合儿童的课程。<br>在郊游和散步中选择吧！" data-ja="お子様向けのコース。<br>おでかけか散歩から選んでみよう！" data-fr="Un parcours parfait pour les enfants.<br>Choisissez entre une sortie et une promenade !">아이와 하기 좋은 코스.<br>나들이와 산책 중 선택해 보세요!</div>
+          </div>
+          <div class="difficulty-card">
+            <div class="difficulty-card-title" data-en="Walking Path" data-zh="散步路线" data-ja="散歩道" data-fr="Sentier pédestre">산책길</div>
+          </div>
+        </div>
+
+        <div class="difficulty-flow" data-en="Getting harder" data-zh="难度提升" data-ja="難易度アップ" data-fr="Plus difficile" style="color:#E53935;">난이도 상승</div>
+
+        <div class="difficulty-group">
+          <div class="pair-label" data-en="Similar level" data-zh="难度相近" data-ja="難易度同等" data-fr="Niveau similaire">난이도 비슷</div>
+          <div class="difficulty-card">
+            <div class="difficulty-card-title" data-en="Nexus's Running Course" data-zh="网络的慢跑路线" data-ja="ネックスのジョギングコース" data-fr="Parcours de jogging de Nexus">넥스의 조깅코스</div>
+            <div class="difficulty-card-desc" data-en="Not for experts?!<br>Anyone can do it!<br>Choose between jogging and sports day!" data-zh="不适合专家?!<br>任何人都可以做!<br>选择慢跑或运动会!" data-ja="専門家向けではない?!<br>誰でもできます!<br>ジョギングか運動会から選択!" data-fr="Pas pour les experts?!<br>N'importe qui peut le faire!<br>Choisissez entre jogging et sports day!">최음이라면?!<br>남녀노소 누구나!<br>조깅과 운동회 중 선택해 보세요!</div>
+          </div>
+          <div class="difficulty-card">
+            <div class="difficulty-card-title" data-en="Sports Festival" data-zh="运动会" data-ja="運動会" data-fr="Festival sportif">운동회</div>
+          </div>
+        </div>
+
+        <div class="difficulty-flow" data-en="Getting harder" data-zh="难度提升" data-ja="難易度アップ" data-fr="Plus difficile" style="color:#E53935;">난이도 상승</div>
+
+        <div class="difficulty-card">
+          <div class="difficulty-card-title" data-en="Genie's Running Course" data-zh="吉尼的慢跑路线" data-ja="ジニのジョギングコース" data-fr="Parcours de jogging de Génie">지니의 러닝코스</div>
+          <div class="difficulty-card-desc" data-en="Speed and stamina essential!" data-zh="速度和耐力必不可少！" data-ja="スピードと体力が必須！" data-fr="Vitesse et endurance essentielles !">순발력과 체력 필수!</div>
+        </div>
+
+        <div class="difficulty-flow" data-en="Getting harder" data-zh="难度提升" data-ja="難易度アップ" data-fr="Plus difficile" style="color:#E53935;">난이도 상승</div>
+
+        <div class="difficulty-card">
+          <div class="difficulty-card-title" data-en="Pump's Extreme Challenge" data-zh="泵的极限挑战" data-ja="ポンプの極限チャレンジ" data-fr="Défi extrême de Pump">펌피의 극한체험</div>
+          <div class="difficulty-card-desc" data-en="Extreme difficulty" data-zh="极端困难" data-ja="極度な難易度" data-fr="Difficulté extrême">극악의 난이도</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="sec-title" data-en="What each color means" data-zh="地板颜色的含义" data-ja="パネルの色の意味" data-fr="Signification des couleurs">발판 색깔의 뜻</div>
+      <div class="panels">
+        <div class="ptile"><div class="swatch s-red">✕</div>
+          <span class="tag" data-en="Avoid" data-zh="避开" data-ja="避ける" data-fr="À éviter">피하기</span>
+          <h4 data-en="Red panel" data-zh="红色地板" data-ja="赤パネル" data-fr="Panneau rouge">빨간 발판</h4>
+          <p data-en="Step on it and you <b>lose a heart.</b> Never step here — move away fast." data-zh="踩到会<b>失去一颗爱心。</b>千万别踩，快躲开!" data-ja="踏むと<b>ハートが1つ減ります。</b>絶対に踏まず、すぐ離れて!" data-fr="Vous <b>perdez un cœur.</b> Ne marchez jamais dessus — écartez-vous vite !">밟으면 <b>하트가 하나 줄어요.</b> 절대 밟지 말고 얼른 비켜요.</p></div>
+        <div class="ptile"><div class="swatch s-blue">+1</div>
+          <span class="tag" data-en="Score" data-zh="得分" data-ja="スコア" data-fr="Points">점수</span>
+          <h4 data-en="Blue panel" data-zh="蓝色地板" data-ja="青パネル" data-fr="Panneau bleu">파란 발판</h4>
+          <p data-en="Each step earns <b>+1 point.</b> Grab them while it's safe!" data-zh="每踩一次<b>得1分。</b>安全时多踩几下!" data-ja="踏むたびに<b>+1点。</b>安全なうちにたくさん踏もう!" data-fr="Chaque pas rapporte <b>+1 point.</b> Profitez-en quand c'est sûr !">밟을 때마다 <b>점수가 +1</b> 올라가요. 안전할 때 부지런히!</p></div>
+        <div class="ptile"><div class="swatch s-green">✓</div>
+          <span class="tag" data-en="Safe zone" data-zh="安全区" data-ja="安全地帯" data-fr="Zone sûre">안전지대</span>
+          <h4 data-en="Green panel" data-zh="绿色地板" data-ja="緑パネル" data-fr="Panneau vert">초록 발판</h4>
+          <p data-en="Stand here and you <b>won't lose hearts.</b> A spot to catch your breath." data-zh="站在这里<b>不会失去爱心。</b>可以稍作休息。" data-ja="ここにいれば<b>ハートは減りません。</b>ひと休みできる場所。" data-fr="Ici, vous <b>ne perdez pas de cœur.</b> Un coin pour souffler.">여기 있으면 <b>하트가 줄지 않아요.</b> 잠깐 쉬어가는 곳.</p></div>
+        <div class="ptile"><div class="swatch s-amber blink">⚠</div>
+          <span class="tag" data-en="Warning" data-zh="危险预警" data-ja="危険予告" data-fr="Alerte">위험 예고</span>
+          <h4 data-en="Yellow panel (blinking)" data-zh="黄色地板（闪烁）" data-ja="黄パネル（点滅）" data-fr="Panneau jaune (clignotant)">노란 발판 (깜빡깜빡)</h4>
+          <p data-en="A sign it's <b>about to turn red.</b> Get off it early!" data-zh="表示<b>即将变成红色。</b>提前离开!" data-ja="<b>まもなく赤に変わる</b>サイン。早めに離れて!" data-fr="Il va <b>bientôt devenir rouge.</b> Partez avant !"><b>곧 빨간 발판으로 바뀐다</b>는 신호예요. 미리 벗어나요!</p></div>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="sec-title" data-en="How to play" data-zh="玩法说明" data-ja="遊び方" data-fr="Comment jouer">플레이 방법</div>
       <div class="steps">
-        <div class="step"><span class="n"></span><p data-en="When it starts, find the <b>green safe zone</b> first.">시작되면 <b>초록 발판(안전지대)</b>부터 찾아요.</p></div>
-        <div class="step"><span class="n"></span><p data-en="Step on <b>blue panels</b> to collect points."><b>파란 발판</b>을 밟아서 점수를 모아요.</p></div>
-        <div class="step"><span class="n"></span><p data-en="If a yellow panel <span class='hl'>blinks — danger!</span> Move away.">노란 발판이 <span class="hl">깜빡이면 위험!</span> 자리를 벗어나요.</p></div>
-        <div class="step"><span class="n"></span><p data-en="When the warning ends, a <b>red panel</b> appears.">경고가 끝나면 <b>빨간 발판</b>이 나타나요.</p></div>
-        <div class="step"><span class="n"></span><p data-en="Dodge red panels and <b>score as much as you can!</b>">빨간 발판을 피하며 <b>점수를 최대한 많이!</b></p></div>
+        <div class="step"><span class="n"></span><p data-en="When it starts, find the <b>green safe zone</b> first." data-zh="开始后先找到<b>绿色安全区</b>。" data-ja="スタートしたらまず<b>緑の安全地帯</b>を探そう。" data-fr="Au départ, repérez d'abord la <b>zone verte sûre</b>.">시작되면 <b>초록 발판(안전지대)</b>부터 찾아요.</p></div>
+        <div class="step"><span class="n"></span><p data-en="Step on <b>blue panels</b> to collect points." data-zh="踩<b>蓝色地板</b>收集分数。" data-ja="<b>青パネル</b>を踏んでポイントを集めよう。" data-fr="Marchez sur les <b>panneaux bleus</b> pour marquer des points."><b>파란 발판</b>을 밟아서 점수를 모아요.</p></div>
+        <div class="step"><span class="n"></span><p data-en="If a yellow panel <span class='hl'>blinks — danger!</span> Move away." data-zh="黄色地板<span class='hl'>闪烁就是危险!</span>快离开。" data-ja="黄パネルが<span class='hl'>点滅したら危険!</span>その場を離れて。" data-fr="Un panneau jaune <span class='hl'>clignote ? Danger !</span> Éloignez-vous.">노란 발판이 <span class="hl">깜빡이면 위험!</span> 자리를 벗어나요.</p></div>
+        <div class="step"><span class="n"></span><p data-en="When the warning ends, a <b>red panel</b> appears." data-zh="警告结束后会出现<b>红色地板</b>。" data-ja="警告が終わると<b>赤パネル</b>が現れる。" data-fr="Après l'alerte, un <b>panneau rouge</b> apparaît.">경고가 끝나면 <b>빨간 발판</b>이 나타나요.</p></div>
+        <div class="step"><span class="n"></span><p data-en="Dodge red panels and <b>score as much as you can!</b>" data-zh="躲开红色地板，<b>尽量多得分!</b>" data-ja="赤を避けながら<b>スコアを稼ごう!</b>" data-fr="Évitez le rouge et <b>marquez un maximum !</b>">빨간 발판을 피하며 <b>점수를 최대한 많이!</b></p></div>
       </div>
       <div class="callout">
         <div class="ic">❤️</div>
-        <div class="big" data-en="Total hearts = players × 5">총 하트 = 참여 인원 × 5</div>
-        <p data-en="Each round gives <span class='eq'>5 hearts</span> per person. Lose them all and you restart!">라운드마다 1인당 <span class="eq">하트 5개</span>. 다 잃으면 처음부터 다시 시작!</p>
+        <div class="big" data-en="5 lives per person" data-zh="每人5条命" data-ja="1人5ライフ" data-fr="5 vies par personne">목숨은 인당 5개</div>
       </div>
     </div>
 
     <div class="block">
-      <div class="sec-title" data-en="Tips to enjoy it more">이렇게 하면 더 재밌어요</div>
+      <div class="sec-title" data-en="Tips to enjoy it more" data-zh="更好玩的小技巧" data-ja="もっと楽しむコツ" data-fr="Astuces pour en profiter">이렇게 하면 더 재밌어요</div>
       <div class="tips">
-        <div class="tip"><span class="s">1</span><p data-en="Spot the <b>safe zone first.</b>"><b>안전지대를 먼저</b> 찾아두기.</p></div>
-        <div class="tip"><span class="s">2</span><p data-en="<b>Watch how</b> the red panels move.">빨간 발판 <b>움직임을 관찰</b>하기.</p></div>
-        <div class="tip"><span class="s">3</span><p data-en="Protecting <b>your hearts</b> beats rushing!">빠른 것보다 <b>하트를 지키는 게</b> 중요!</p></div>
-        <div class="tip"><span class="s">4</span><p data-en="Slip up? <b>Cheer each other on.</b>">실수해도 <b>서로 응원</b>해주기.</p></div>
-        <div class="tip"><span class="s">5</span><p data-en="Save the memory with a <b>time-lapse</b> 📹">타임랩스 영상으로 <b>추억 남기기</b> 📹</p></div>
+        <div class="tip"><span class="s">1</span><p data-en="Spot the <b>safe zone first.</b>" data-zh="先找好<b>安全区</b>。" data-ja="まず<b>安全地帯</b>を確認。" data-fr="Repérez la <b>zone sûre</b> d'abord."><b>안전지대를 먼저</b> 찾아두기.</p></div>
+        <div class="tip"><span class="s">2</span><p data-en="<b>Watch how</b> the red panels move." data-zh="<b>观察</b>红色地板的移动规律。" data-ja="赤パネルの<b>動きを観察</b>しよう。" data-fr="<b>Observez</b> le déplacement des panneaux rouges.">빨간 발판 <b>움직임을 관찰</b>하기.</p></div>
+        <div class="tip"><span class="s">3</span><p data-en="Protecting <b>your hearts</b> beats rushing!" data-zh="比起速度，<b>守住爱心</b>更重要!" data-ja="速さより<b>ハートを守る</b>のが大事!" data-fr="Protéger <b>ses cœurs</b> vaut mieux que se presser !">빠른 것보다 <b>하트를 지키는 게</b> 중요!</p></div>
+        <div class="tip"><span class="s">4</span><p data-en="Slip up? <b>Cheer each other on.</b>" data-zh="失误了也要<b>互相加油</b>。" data-ja="失敗しても<b>お互い応援</b>しよう。" data-fr="Une erreur ? <b>Encouragez-vous !</b>">실수해도 <b>서로 응원</b>해주기.</p></div>
+        <div class="tip"><span class="s">5</span><p data-en="Save the memory with a <b>time-lapse</b> 📹" data-zh="用<b>延时视频</b>留下回忆 📹" data-ja="<b>タイムラプス</b>で思い出を残そう 📹" data-fr="Gardez un souvenir en <b>time-lapse</b> 📹">타임랩스 영상으로 <b>추억 남기기</b> 📹</p></div>
       </div>
     </div>
 
@@ -208,52 +307,66 @@
   <section class="mode" id="rival">
 
     <div class="meta">
-      <span class="m" data-en="⏱ Time limit <b>15 min</b>">⏱ 제한시간 <b>15분</b></span>
-      <span class="m" data-en="⚔️ <b>2-team match</b> (1v1 / 2v2)">⚔️ <b>2팀 대결</b> (1:1 / 2:2)</span>
-      <span class="m" data-en="🏁 Claim first to win">🏁 먼저 차지하면 승리</span>
+      <span class="m" data-en="⏱ Time limit <b>15 min</b>" data-zh="⏱ 限时 <b>15分钟</b>" data-ja="⏱ 制限時間 <b>15分</b>" data-fr="⏱ Durée <b>15 min</b>">⏱ 제한시간 <b>15분</b></span>
+      <span class="m" data-en="⚔️ <b>2-team match</b> · 2–4 players" data-zh="⚔️ <b>2队对战</b> · 2~4人" data-ja="⚔️ <b>2チーム対戦</b> · 2〜4人" data-fr="⚔️ <b>2 équipes</b> · 2 à 4 joueurs">⚔️ <b>2팀 대결</b> · 2~4인</span>
+      <span class="m" data-en="🏁 First to clear wins" data-zh="🏁 最先踩完的队伍获胜" data-ja="🏁 先に踏み切ったチームが勝利" data-fr="🏁 La première équipe à tout couvrir gagne">🏁 먼저 다 밟는 팀이 승리</span>
     </div>
 
     <div class="block">
-      <div class="sec-title" data-en="What each color means">발판 색깔의 뜻</div>
-      <p class="sec-desc" data-en="Panel meanings are the same as Co-op mode.">발판 의미는 협동모드와 똑같아요.</p>
-      <div class="panels">
-        <div class="ptile"><div class="swatch s-red">✕</div>
-          <span class="tag" data-en="Avoid">피하기</span>
-          <h4 data-en="Red panel">빨간 발판</h4>
-          <p data-en="Step on it and you <b>lose a heart.</b> Avoid it even mid-match.">밟으면 <b>하트가 줄어요.</b> 대결 중에도 무조건 피하기.</p></div>
-        <div class="ptile"><div class="swatch s-blue">+1</div>
-          <span class="tag" data-en="Score">점수</span>
-          <h4 data-en="Blue · Pink panel">파란 · 핑크 발판</h4>
-          <p data-en="<b>Your team's score panels.</b> Each step gets you closer to clearing."><b>우리 팀 구역의 점수 발판</b>. 밟을수록 클리어에 가까워져요.</p></div>
-        <div class="ptile"><div class="swatch s-green">✓</div>
-          <span class="tag" data-en="Safe zone">안전지대</span>
-          <h4 data-en="Green panel">초록 발판</h4>
-          <p data-en="A <b>no-heart-loss</b> safe zone. Duck in when it's risky!"><b>하트가 줄지 않는</b> 안전지대. 위험할 때 피신!</p></div>
-        <div class="ptile"><div class="swatch s-amber blink">⚠</div>
-          <span class="tag" data-en="Warning">위험 예고</span>
-          <h4 data-en="Yellow panel (blinking)">노란 발판 (깜빡깜빡)</h4>
-          <p data-en="A sign it's <b>about to turn red.</b> Get off it early!"><b>곧 빨간 발판으로 바뀐다</b>는 신호. 미리 벗어나요!</p></div>
+      <div class="sec-title" data-en="Difficulty" data-zh="难度" data-ja="難易度" data-fr="Difficulté">난이도</div>
+      <div style="display:grid;gap:12px;max-width:560px;margin:0 auto;">
+        <div style="background:#1C1A17;border:3px solid #000;border-radius:12px;padding:14px;text-align:left;">
+          <div style="font-family:var(--display);font-size:24px;font-weight:700;color:#fff;" data-en="Warm-up" data-zh="热身" data-ja="ウォームアップ" data-fr="Échauffement">워밍업</div>
+          <div style="font-size:15px;color:#ccc;margin-top:8px;line-height:1.5;" data-en="Lightly play one round?!" data-zh="轻轻玩一局?!" data-ja="軽く1ラウンド?!" data-fr="Jouer légèrement une manche ?!">가볍게 한 판?!</div>
+        </div>
+        <div style="background:#1C1A17;border:3px solid #000;border-radius:12px;padding:14px;text-align:left;">
+          <div style="font-family:var(--display);font-size:24px;font-weight:700;color:#fff;" data-en="Hyperfocus" data-zh="超专注" data-ja="ハイパーフォーカス" data-fr="Hyperfocalisation">과몰입</div>
+          <div style="font-size:15px;color:#ccc;margin-top:8px;line-height:1.5;" data-en="Play it for real!!" data-zh="真正玩一局！！" data-ja="本気でやる！！" data-fr="Jouez-le vraiment !!">제대로 한 판!!</div>
+        </div>
       </div>
     </div>
 
-    <div class="note" data-en="The basic rules match Co-op mode. <b>There's just one difference</b> — the floor splits into team zones, and the <b>first team to step on all its score panels</b> wins!">기본 규칙은 협동모드와 같아요. <b>차이점은 딱 하나</b> — 바닥이 팀별 구역으로 나뉘고, 자기 구역의 점수 발판을 <b>가장 빨리 다 밟는 팀</b>이 이겨요!</div>
+    <div class="block">
+      <div class="sec-title" data-en="What each color means" data-zh="地板颜色的含义" data-ja="パネルの色の意味" data-fr="Signification des couleurs">발판 색깔의 뜻</div>
+      <div class="panels">
+        <div class="ptile"><div class="swatch s-red">✕</div>
+          <span class="tag" data-en="Avoid" data-zh="避开" data-ja="避ける" data-fr="À éviter">피하기</span>
+          <h4 data-en="Red panel" data-zh="红色地板" data-ja="赤パネル" data-fr="Panneau rouge">빨간 발판</h4>
+          <p data-en="Step on it and you <b>lose a heart.</b> Avoid it even mid-match." data-zh="踩到会<b>失去爱心。</b>对战中也一定要避开。" data-ja="踏むと<b>ハートが減る。</b>対戦中でも必ず避けて。" data-fr="Vous <b>perdez un cœur.</b> À éviter même en plein match.">밟으면 <b>하트가 줄어요.</b> 대결 중에도 무조건 피하기.</p></div>
+        <div class="ptile"><div class="swatch s-blue">+1</div>
+          <span class="tag" data-en="Score" data-zh="得分" data-ja="スコア" data-fr="Points">점수</span>
+          <h4 data-en="Blue · Pink panel" data-zh="蓝色·粉色地板" data-ja="青・ピンクパネル" data-fr="Panneau bleu · rose">파란 · 핑크 발판</h4>
+          <p data-en="<b>Your team's score panels.</b> Each step gets you closer to clearing." data-zh="<b>本队区域的得分地板。</b>踩得越多越接近通关。" data-ja="<b>自チームの得点パネル。</b>踏むほどクリアに近づく。" data-fr="<b>Les panneaux de votre équipe.</b> Chaque pas vous rapproche de la victoire."><b>우리 팀 구역의 점수 발판</b>. 밟을수록 클리어에 가까워져요.</p></div>
+        <div class="ptile"><div class="swatch s-green">✓</div>
+          <span class="tag" data-en="Safe zone" data-zh="安全区" data-ja="安全地帯" data-fr="Zone sûre">안전지대</span>
+          <h4 data-en="Green panel" data-zh="绿色地板" data-ja="緑パネル" data-fr="Panneau vert">초록 발판</h4>
+          <p data-en="A <b>no-heart-loss</b> safe zone. Duck in when it's risky!" data-zh="<b>不掉爱心</b>的安全区。危险时来躲避!" data-ja="<b>ハートが減らない</b>安全地帯。危ない時はここへ!" data-fr="Zone sûre <b>sans perte de cœur.</b> Réfugiez-vous en cas de danger !"><b>하트가 줄지 않는</b> 안전지대. 위험할 때 피신!</p></div>
+        <div class="ptile"><div class="swatch s-amber blink">⚠</div>
+          <span class="tag" data-en="Warning" data-zh="危险预警" data-ja="危険予告" data-fr="Alerte">위험 예고</span>
+          <h4 data-en="Yellow panel (blinking)" data-zh="黄色地板（闪烁）" data-ja="黄パネル（点滅）" data-fr="Panneau jaune (clignotant)">노란 발판 (깜빡깜빡)</h4>
+          <p data-en="A sign it's <b>about to turn red.</b> Get off it early!" data-zh="表示<b>即将变成红色。</b>提前离开!" data-ja="<b>まもなく赤に変わる</b>サイン。早めに離れて!" data-fr="Il va <b>bientôt devenir rouge.</b> Partez avant !"><b>곧 빨간 발판으로 바뀐다</b>는 신호. 미리 벗어나요!</p></div>
+      </div>
+    </div>
+
+    <div class="note" data-en="The basic rules match Co-op mode. <b>There's just one difference</b> — the floor splits into team zones, and the <b>first team to step on all its score panels</b> wins!" data-zh="基本规则与协力模式相同。<b>唯一的区别</b> — 地板按队伍分区，<b>最先踩完本区得分地板的队伍</b>获胜!" data-ja="基本ルールは協力モードと同じ。<b>違いはひとつだけ</b> — フロアがチームごとに分かれ、<b>自分のエリアを先に踏み切ったチーム</b>の勝ち!" data-fr="Les règles de base sont celles du mode coop. <b>Une seule différence</b> — le sol est divisé en zones d'équipe, et <b>la première équipe à compléter la sienne</b> gagne !">기본 규칙은 협동모드와 같아요. <b>차이점은 딱 하나</b> — 바닥이 팀별 구역으로 나뉘고, 자기 구역의 점수 발판을 <b>가장 빨리 다 밟는 팀</b>이 이겨요!</div>
 
     <div class="block">
-      <div class="sec-title" data-en="Compete in your team's zone">우리 팀 구역에서 대결해요</div>
-      <p class="sec-desc" data-en="The floor divides by player count. <b style='color:var(--ink);font-weight:600'>White dots</b> = panels to step on.">인원에 따라 바닥이 이렇게 나뉘어요. <b style="color:var(--ink);font-weight:600">흰 점</b> = 밟아야 할 발판.</p>
+      <div class="sec-title" data-en="Compete in your team's zone" data-zh="在本队区域对战" data-ja="自分のエリアで対戦" data-fr="Affrontez-vous dans votre zone">우리 팀 구역에서 대결해요</div>
       <div class="zones">
+
         <div class="zcard">
-          <h4 data-en="2 players / 2 teams">2인 / 2팀</h4>
-          <p class="p" data-en="Split top & bottom (1v1)">위·아래로 반씩 (1:1)</p>
+          <h4 data-en="2 players · 1v1" data-zh="2人 · 1:1" data-ja="2人 · 1:1" data-fr="2 joueurs · 1c1">2인 · 1:1</h4>
+          <p class="p" data-en="Floor splits top & bottom — one player per side." data-zh="地板上下分区，每侧1名玩家。" data-ja="上下に分かれて、各1人で対戦。" data-fr="Sol divisé haut / bas — un joueur de chaque côté.">위·아래로 나뉘어 1명씩 대결해요.</p>
           <div class="floor" id="floor2"></div>
           <div class="zkey">
-            <span data-en="<i style='background:var(--blue)'></i>Team 1"><i style="background:var(--blue)"></i>1팀 구역</span>
-            <span data-en="<i style='background:var(--pink)'></i>Team 2"><i style="background:var(--pink)"></i>2팀 구역</span>
+            <span><i style="background:var(--blue)"></i><span data-en="Team 1" data-zh="1队" data-ja="チーム1" data-fr="Équipe 1">1팀</span></span>
+            <span><i style="background:var(--pink)"></i><span data-en="Team 2" data-zh="2队" data-ja="チーム2" data-fr="Équipe 2">2팀</span></span>
           </div>
         </div>
+
         <div class="zcard">
-          <h4 data-en="3 players">3인</h4>
-          <p class="p" data-en="Split into 3 vertical columns">세로 3칸으로 분할</p>
+          <h4 data-en="3 players · 1v1v1" data-zh="3人 · 1:1:1" data-ja="3人 · 1:1:1" data-fr="3 joueurs · 1c1c1">3인 · 1:1:1</h4>
+          <p class="p" data-en="Floor splits into 3 vertical columns — one player per zone." data-zh="地板纵向分成3列 — 每列1名玩家。" data-ja="縦3列に分割 — 各1人で対戦。" data-fr="Sol en 3 colonnes verticales — un joueur par zone.">세로로 3구역으로 나뉘어 1명씩 개인전으로 대결해요.</p>
           <div class="floor" id="floor3"></div>
           <div class="zkey">
             <span><i style="background:var(--blue)"></i>1P</span>
@@ -261,54 +374,55 @@
             <span><i style="background:var(--purple)"></i>3P</span>
           </div>
         </div>
-        <div class="zcard">
-          <h4 data-en="4 players">4인</h4>
-          <p class="p" data-en="Split into 4 quadrants">네 구역으로 분할</p>
+
+        <div class="zcard" style="border-color:#3B6BE0;background:linear-gradient(180deg,#f0f4ff,var(--card))">
+          <div style="display:inline-flex;align-items:center;gap:6px;background:#3B6BE0;color:#fff;font-size:14px;font-weight:700;padding:5px 14px;border-radius:999px;margin-bottom:12px;"
+            data-en="🔵 Blue Room only" data-zh="🔵 仅限蓝色房间" data-ja="🔵 ブルールームのみ" data-fr="🔵 Salle bleue uniquement">🔵 블루방 전용</div>
+          <h4 data-en="4 players · FFA or 2v2" data-zh="4人 · 个人战或2:2" data-ja="4人 · 個人戦または2:2" data-fr="4 joueurs · Chacun pour soi ou 2c2">4인 · 개인전 or 2:2</h4>
+          <p class="p" data-en="Floor splits into 4 zones — play solo (free-for-all) or pair up as 2v2." data-zh="地板分成4个区域 — 可个人战，也可2:2组队。" data-ja="4エリアに分割 — 個人戦でもチーム2:2でも遊べます。" data-fr="Sol en 4 zones — jouez en individuel ou en équipe de 2.">구역이 4개로 나뉘어요. 각자 개인전으로 하거나, 2:2로 팀을 짜서 대결할 수 있어요.</p>
           <div class="floor" id="floor4"></div>
           <div class="zkey">
-            <span><i style="background:var(--blue)"></i>1P</span>
-            <span><i style="background:var(--pink)"></i>2P</span>
-            <span><i style="background:var(--purple)"></i>3P</span>
-            <span><i style="background:var(--teal)"></i>4P</span>
+            <span><i style="background:var(--blue)"></i><span data-en="Team 1" data-zh="1队" data-ja="チーム1" data-fr="Équipe 1">1팀</span></span>
+            <span><i style="background:var(--pink)"></i><span data-en="Team 2" data-zh="2队" data-ja="チーム2" data-fr="Équipe 2">2팀</span></span>
           </div>
         </div>
+
       </div>
     </div>
 
     <div class="block">
-      <div class="sec-title" data-en="Winning & restarting">승리 & 다시 시작</div>
+      <div class="sec-title" data-en="Winning & restarting" data-zh="胜利与重新开始" data-ja="勝利とリスタート" data-fr="Victoire et relance">승리 & 다시 시작</div>
       <div class="winrow">
-        <div class="wbox win"><h5 data-en="🏆 Win">🏆 승리</h5><p data-en="The <b>first team to clear all its score panels</b> wins!">구역의 점수 발판을 <b>가장 먼저 다 밟은 팀</b>이 승리!</p></div>
-        <div class="wbox reset"><h5 data-en="🔄 Restart">🔄 다시 시작</h5><p data-en="<b>Lose all hearts</b> and the round starts over."><b>하트를 모두 잃으면</b> 라운드를 처음부터.</p></div>
+        <div class="wbox win"><h5 data-en="🏆 Win" data-zh="🏆 胜利" data-ja="🏆 勝利" data-fr="🏆 Victoire">🏆 승리</h5><p data-en="The <b>first team to clear all its score panels</b> wins!" data-zh="<b>最先踩完得分地板的队伍</b>获胜!" data-ja="<b>先に全部踏み切ったチーム</b>の勝利!" data-fr="<b>La première équipe à tout compléter</b> gagne !">구역의 점수 발판을 <b>가장 먼저 다 밟은 팀</b>이 승리!</p></div>
+        <div class="wbox reset"><h5 data-en="🔄 Restart" data-zh="🔄 重新开始" data-ja="🔄 リスタート" data-fr="🔄 Recommencer">🔄 다시 시작</h5><p data-en="<b>Lose all hearts</b> and the round starts over." data-zh="<b>爱心全部失去</b>则本轮重来。" data-ja="<b>ハートを全部失う</b>とラウンド最初から。" data-fr="<b>Plus de cœurs ?</b> La manche recommence."><b>하트를 모두 잃으면</b> 라운드를 처음부터.</p></div>
       </div>
       <div class="callout">
         <div class="ic">❤️</div>
-        <div class="big" data-en="5 hearts per person each round">라운드마다 1인당 하트 5개</div>
-        <p data-en="Speed helps, but the team that protects its hearts lasts longest.">빨리 밟는 것도 좋지만, 하트를 지키는 팀이 끝까지 살아남아요.</p>
+        <div class="big" data-en="5 lives per person" data-zh="每人5条命" data-ja="1人5ライフ" data-fr="5 vies par personne">목숨은 인당 5개</div>
       </div>
     </div>
 
     <div class="block">
-      <div class="sec-title" data-en="Tips to win">이기는 팁</div>
+      <div class="sec-title" data-en="Tips to win" data-zh="获胜技巧" data-ja="勝つコツ" data-fr="Astuces pour gagner">이기는 팁</div>
       <div class="tips">
-        <div class="tip"><span class="s">1</span><p data-en="Map your <b>clear route</b> before you start.">시작 전 <b>클리어 동선</b>을 먼저 그려보기.</p></div>
-        <div class="tip"><span class="s">2</span><p data-en="Watch the red panels and take the <b>safe path.</b>">빨간 발판을 관찰해 <b>안전한 길</b>로 돌기.</p></div>
-        <div class="tip"><span class="s">3</span><p data-en="<b>Manage hearts</b> before chasing speed!">속도보다 <b>하트 관리</b>가 먼저!</p></div>
-        <div class="tip"><span class="s">4</span><p data-en="Review replays to find your <b>weak sections.</b>">리플레이로 <b>부족한 구간</b> 분석하기.</p></div>
-        <div class="tip"><span class="s">5</span><p data-en="Save the memory with a <b>time-lapse</b> 📹">타임랩스 영상으로 <b>추억 남기기</b> 📹</p></div>
+        <div class="tip"><span class="s">1</span><p data-en="Map your <b>clear route</b> before you start." data-zh="开始前先规划<b>通关路线</b>。" data-ja="始まる前に<b>クリアルート</b>を考えよう。" data-fr="Planifiez votre <b>itinéraire</b> avant de commencer.">시작 전 <b>클리어 동선</b>을 먼저 그려보기.</p></div>
+        <div class="tip"><span class="s">2</span><p data-en="Watch the red panels and take the <b>safe path.</b>" data-zh="观察红色地板，走<b>安全路线</b>。" data-ja="赤パネルを見て<b>安全な道</b>を選ぼう。" data-fr="Observez le rouge et prenez le <b>chemin sûr</b>.">빨간 발판을 관찰해 <b>안전한 길</b>로 돌기.</p></div>
+        <div class="tip"><span class="s">3</span><p data-en="<b>Manage hearts</b> before chasing speed!" data-zh="<b>管理爱心</b>比追求速度更重要!" data-ja="速さより<b>ハート管理</b>が先!" data-fr="<b>Gérez vos cœurs</b> avant la vitesse !">속도보다 <b>하트 관리</b>가 먼저!</p></div>
+        <div class="tip"><span class="s">4</span><p data-en="Review replays to find your <b>weak sections.</b>" data-zh="用回放分析<b>薄弱环节</b>。" data-ja="リプレイで<b>弱点を分析</b>しよう。" data-fr="Analysez vos <b>points faibles</b> en replay.">리플레이로 <b>부족한 구간</b> 분석하기.</p></div>
+        <div class="tip"><span class="s">5</span><p data-en="Save the memory with a <b>time-lapse</b> 📹" data-zh="用<b>延时视频</b>留下回忆 📹" data-ja="<b>タイムラプス</b>で思い出を残そう 📹" data-fr="Gardez un souvenir en <b>time-lapse</b> 📹">타임랩스 영상으로 <b>추억 남기기</b> 📹</p></div>
       </div>
     </div>
 
   </section>
 
-  <footer data-en="※ Pump Arcade supports <b>safe play</b>!">※ 펌프아케이드는 <b>안전한 플레이</b>를 응원합니다!</footer>
+  <footer data-en="※ Pump Arcade supports <b>safe play</b>!" data-zh="※ Pump Arcade 支持<b>安全游玩</b>!" data-ja="※ Pump Arcadeは<b>安全なプレイ</b>を応援します!" data-fr="※ Pump Arcade encourage un <b>jeu sécurisé</b> !">※ 펌프아케이드는 <b>안전한 플레이</b>를 응원합니다!</footer>
 </div>
 </div>
 
 <script>
   /* 탭 전환 */
   const tabs=document.querySelectorAll('.tab');
-  const modes={coop:document.getElementById('coop'),rival:document.getElementById('rival')};
+  const modes={intro:document.getElementById('intro'),coop:document.getElementById('coop'),rival:document.getElementById('rival')};
   tabs.forEach(t=>t.addEventListener('click',()=>{
     tabs.forEach(x=>x.classList.remove('on'));t.classList.add('on');
     Object.values(modes).forEach(m=>m.classList.remove('show'));
@@ -321,8 +435,11 @@
   i18nEls.forEach(el=>koCache.set(el, el.innerHTML));
   const langBtns=document.querySelectorAll('.lang-btn');
   function setLang(l){
-    i18nEls.forEach(el=>{ el.innerHTML = (l==='en') ? el.getAttribute('data-en') : koCache.get(el); });
+    i18nEls.forEach(el=>{
+      el.innerHTML = (l==='ko') ? koCache.get(el) : (el.getAttribute('data-'+l) || el.getAttribute('data-en'));
+    });
     document.documentElement.lang = l;
+    document.body.setAttribute('data-lang', l);
     langBtns.forEach(b=>b.classList.toggle('on', b.dataset.lang===l));
   }
   langBtns.forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
@@ -333,7 +450,7 @@
     el.style.gridTemplateColumns=`repeat(${cols},1fr)`;el.innerHTML='';
     for(let r=0;r<rows;r++)for(let c=0;c<cols;c++){
       const team=assign(c,r),cell=document.createElement('div');cell.className='cell';
-      if(team){cell.classList.add('z');cell.style.background=C[team];if((c+r)%3===0)cell.classList.add('goal');}
+      if(team){cell.classList.add('z');cell.style.background=C[team];}
       el.appendChild(cell);
     }
   }
