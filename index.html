@@ -56,7 +56,8 @@
 
   .block{margin-top:38px}
   .sec-title{font-family:var(--display);font-weight:400;font-size:clamp(28px,6.6vw,34px);line-height:1.25;margin-bottom:18px}
-  .difficulty-note{font-family:'Pretendard',sans-serif;font-weight:400;font-size:clamp(14px,3.3vw,17px);color:var(--sub);margin:2px 0 18px}
+  .difficulty-note{font-family:'Pretendard',sans-serif;font-weight:700;font-size:clamp(14px,3.3vw,17px);color:#e53935;margin:2px 0 18px;animation:blink-note 3s infinite}
+  @keyframes blink-note{0%,100%{opacity:1}50%{opacity:0.3}}
   .mark{width:34px;height:3px;background:var(--accent);border-radius:2px;margin:13px auto 20px}
 
   .panels{display:grid;grid-template-columns:1fr 1fr;gap:12px}
@@ -259,7 +260,7 @@
   <!-- ============ 개요 / Overview ============ -->
   <section class="mode show" id="intro">
     <div class="block" style="margin-top:0">
-      <h3 style="font-family:var(--display);font-size:28px;font-weight:700;text-align:center;margin-bottom:36px;margin-top:20px;color:var(--ink);" data-en="Choose Your Mode" data-zh="选择你的模式" data-ja="モードを選ぶ" data-fr="Choisissez votre mode">모드를 선택해주세요!<div style="font-size:16px;font-weight:500;color:var(--sub);margin-top:10px;">15분 플레이</div></h3>
+      <h3 style="font-family:var(--display);font-size:28px;font-weight:700;text-align:center;margin-bottom:36px;margin-top:20px;color:var(--ink);" data-en="Choose Your Mode" data-zh="选择你的模式" data-ja="モードを選ぶ" data-fr="Choisissez votre mode">모드 선택 후 게임 방법을 확인해보세요!<div style="font-size:16px;font-weight:500;color:var(--sub);margin-top:10px;">15분 플레이</div></h3>
       
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:560px;margin:0 auto;">
         <!-- 협동모드 카드 -->
@@ -301,12 +302,12 @@
         <div class="difficulty-group">
           <div class="pair-label" data-en="Similar level" data-zh="难度相近" data-ja="難易度同等" data-fr="Niveau similaire">난이도 비슷</div>
           <div class="difficulty-card">
-            <div class="difficulty-card-title" data-en="Umi's Park Outing" data-zh="乌米的公园郊游" data-ja="ウミの公園おでかけ" data-fr="Sortie au parc d'Umi">루미의 동산나들이</div>
+            <div class="difficulty-card-title" data-en="LUMI'S HILL QUEST" data-zh="LUMI'S HILL QUEST" data-ja="LUMI'S HILL QUEST" data-fr="LUMI'S HILL QUEST">루미의 동산나들이</div>
             <div class="difficulty-card-desc" data-en="A course perfect for kids.<br>Choose between an outing and a casual walk!" data-zh="非常适合儿童的课程。<br>在郊游和散步中选择吧！" data-ja="お子様向けのコース。<br>おでかけか散歩から選んでみよう！" data-fr="Un parcours parfait pour les enfants.<br>Choisissez entre une sortie et une promenade !">아이와 하기 좋은 코스.<br>나들이와 산책 중 선택해 보세요!</div>
           </div>
           <div class="difficulty-card">
             <div class="comic-badge">NEW!</div>
-            <div class="difficulty-card-title" data-en="Walking Path" data-zh="散步路线" data-ja="散歩道" data-fr="Sentier pédestre">산책길</div>
+            <div class="difficulty-card-title" data-en="TRAIL WALK" data-zh="TRAIL WALK" data-ja="TRAIL WALK" data-fr="TRAIL WALK">산책길</div>
           </div>
         </div>
 
@@ -316,26 +317,26 @@
           <div class="pair-label" data-en="Similar level" data-zh="难度相近" data-ja="難易度同等" data-fr="Niveau similaire">난이도 비슷</div>
           <div class="difficulty-card">
             <div class="comic-badge best">BEST</div>
-            <div class="difficulty-card-title" data-en="Nexus's Running Course" data-zh="网络的慢跑路线" data-ja="ネックスのジョギングコース" data-fr="Parcours de jogging de Nexus">넥스의 조깅코스</div>
-            <div class="difficulty-card-desc" data-en="Not for experts?!<br>Anyone can do it!<br>Choose between jogging and sports day!" data-zh="不适合专家?!<br>任何人都可以做!<br>选择慢跑或运动会!" data-ja="専門家向けではない?!<br>誰でもできます!<br>ジョギングか運動会から選択!" data-fr="Pas pour les experts?!<br>N'importe qui peut le faire!<br>Choisissez entre jogging et sports day!">최음이라면?!<br>남녀노소 누구나!<br>조깅과 운동회 중 선택해 보세요!</div>
+            <div class="difficulty-card-title" data-en="NEX'S POWER JOG" data-zh="NEX'S POWER JOG" data-ja="NEX'S POWER JOG" data-fr="NEX'S POWER JOG">넥스의 조깅코스</div>
+            <div class="difficulty-card-desc" data-en="Not for experts?!<br>Anyone can do it!<br>Choose between jogging and sports day!" data-zh="不适合专家?!<br>任何人都可以做!<br>选择慢跑或运动会!" data-ja="専門家向けではない?!<br>誰でもできます!<br>ジョギングか運動会から選択!" data-fr="Pas pour les experts?!<br>N'importe qui peut le faire!<br>Choisissez entre jogging et sports day!">처음이라면?!<br>남녀노소 누구나!<br>조깅과 운동회 중 선택해 보세요!</div>
           </div>
           <div class="difficulty-card">
             <div class="comic-badge">NEW!</div>
-            <div class="difficulty-card-title" data-en="Sports Festival" data-zh="运动会" data-ja="運動会" data-fr="Festival sportif">운동회</div>
+            <div class="difficulty-card-title" data-en="Field Day" data-zh="Field Day" data-ja="Field Day" data-fr="Field Day">운동회</div>
           </div>
         </div>
 
         <div class="difficulty-flow" data-en="Getting harder" data-zh="难度提升" data-ja="難易度アップ" data-fr="Plus difficile" style="color:#E53935;">난이도 상승</div>
 
         <div class="difficulty-card">
-          <div class="difficulty-card-title" data-en="Genie's Running Course" data-zh="吉尼的慢跑路线" data-ja="ジニのジョギングコース" data-fr="Parcours de jogging de Génie">지니의 러닝코스</div>
+          <div class="difficulty-card-title" data-en="JINNY'S SPEED RUN" data-zh="JINNY'S SPEED RUN" data-ja="JINNY'S SPEED RUN" data-fr="JINNY'S SPEED RUN">지니의 러닝코스</div>
           <div class="difficulty-card-desc" data-en="Speed and stamina essential!" data-zh="速度和耐力必不可少！" data-ja="スピードと体力が必須！" data-fr="Vitesse et endurance essentielles !">순발력과 체력 필수!</div>
         </div>
 
         <div class="difficulty-flow" data-en="Getting harder" data-zh="难度提升" data-ja="難易度アップ" data-fr="Plus difficile" style="color:#E53935;">난이도 상승</div>
 
         <div class="difficulty-card">
-          <div class="difficulty-card-title" data-en="Pump's Extreme Challenge" data-zh="泵的极限挑战" data-ja="ポンプの極限チャレンジ" data-fr="Défi extrême de Pump">펌피의 극한체험</div>
+          <div class="difficulty-card-title" data-en="PUMPY'S ULTIMATE TRAIL" data-zh="PUMPY'S ULTIMATE TRAIL" data-ja="PUMPY'S ULTIMATE TRAIL" data-fr="PUMPY'S ULTIMATE TRAIL">펌피의 극한체험</div>
           <div class="difficulty-card-desc" data-en="Extreme difficulty" data-zh="极端困难" data-ja="極度な難易度" data-fr="Difficulté extrême">극악의 난이도</div>
         </div>
       </div>
@@ -421,7 +422,7 @@
           <div style="font-size:15px;color:#ccc;margin-top:8px;line-height:1.5;" data-en="Lightly play one round?!" data-zh="轻轻玩一局?!" data-ja="軽く1ラウンド?!" data-fr="Jouer légèrement une manche ?!">가볍게 한 판?!</div>
         </div>
         <div style="background:#1C1A17;border:3px solid #000;border-radius:12px;padding:14px;text-align:left;">
-          <div style="font-family:'Pretendard',sans-serif;font-size:24px;font-weight:700;color:#fff;" data-en="Hyperfocus" data-zh="超专注" data-ja="ハイパーフォーカス" data-fr="Hyperfocalisation">과몰입</div>
+          <div style="font-family:'Pretendard',sans-serif;font-size:24px;font-weight:700;color:#fff;" data-en="LOCKED IN" data-zh="LOCKED IN" data-ja="LOCKED IN" data-fr="LOCKED IN">과몰입</div>
           <div style="font-size:15px;color:#ccc;margin-top:8px;line-height:1.5;" data-en="Play it for real!!" data-zh="真正玩一局！！" data-ja="本気でやる！！" data-fr="Jouez-le vraiment !!">제대로 한 판!!</div>
         </div>
       </div>
